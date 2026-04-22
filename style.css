@@ -1,35 +1,60 @@
-/* Reset */
+/* Animated Background */
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #eef2f7;
+    
+    background: linear-gradient(
+        -45deg,
+        #003366,
+        #0055a5,
+        #0099cc,
+        #00264d
+    );
+
+    background-size: 400% 400%;
+
+    animation: gradientBG 12s ease infinite;
 }
 
-/* Header Banner */
+/* Background Animation */
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Header */
+
 header {
-    background: linear-gradient(to right, #003366, #0055a5);
+    background: rgba(0,0,0,0.6);
     color: white;
     text-align: center;
     padding: 30px 10px;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 40px;
+    font-size: 42px;
     letter-spacing: 1px;
 }
 
 header p {
     font-size: 18px;
-    margin-top: 8px;
 }
 
-/* Navigation Bar */
+/* Navigation */
+
 nav {
-    background-color: #00264d;
+    background-color: rgba(0,0,0,0.7);
     padding: 12px;
     text-align: center;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
 nav a {
@@ -45,26 +70,32 @@ nav a:hover {
     color: #ffd700;
 }
 
-/* Main Container */
+/* Container */
+
 .container {
     padding: 30px;
     text-align: center;
+    background: rgba(255,255,255,0.9);
+    margin: 20px;
+    border-radius: 12px;
 }
 
 /* Images */
+
 img {
     width: 300px;
     height: 200px;
     margin: 15px;
     border-radius: 12px;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 /* Cards */
+
 .card {
     display: inline-block;
     margin: 20px;
@@ -72,40 +103,24 @@ img:hover {
     background-color: white;
     border-radius: 12px;
     width: 260px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.3);
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-}
-
-/* Headings */
-h2 {
-    color: #003366;
-    margin-bottom: 15px;
-}
-
-h3 {
-    color: #0055a5;
+    transform: translateY(-10px);
 }
 
 /* Footer */
+
 footer {
-    background: linear-gradient(to right, #003366, #0055a5);
+    background: rgba(0,0,0,0.7);
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: 30px;
 }
 
-/* Contact Form */
-input, textarea {
-    padding: 8px;
-    width: 250px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
+/* Button */
 
 input[type="submit"] {
     background-color: #0055a5;
@@ -113,6 +128,7 @@ input[type="submit"] {
     border: none;
     cursor: pointer;
     padding: 10px 18px;
+    border-radius: 6px;
 }
 
 input[type="submit"]:hover {
