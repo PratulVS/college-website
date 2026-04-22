@@ -58,4 +58,29 @@ Our campus provides a modern learning environment and excellent facilities.
 </footer>
 
 </body>
+<script>
+
+document.querySelectorAll("a").forEach(link => {
+
+    if (link.hostname === window.location.hostname) {
+
+        link.addEventListener("click", function(e) {
+
+            e.preventDefault();
+
+            let destination = this.href;
+
+            document.body.classList.add("fade-out");
+
+            setTimeout(() => {
+                window.location = destination;
+            }, 400);
+
+        });
+
+    }
+
+});
+
+</script>
 </html>
